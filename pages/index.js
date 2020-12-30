@@ -23,7 +23,7 @@ export default function Home({initialTodos}) {
       <main>
         <h1>To Do App</h1>
         <ul>
-          {todos && todos.map(todo => <Todo key={todo.id} todo={todo}/>)}
+          {todos && todos.map((todo) => <Todo key={todo.id} todo={todo}/>)}
         </ul>
       </main>
 

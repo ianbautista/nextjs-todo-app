@@ -5,6 +5,7 @@ export const TodosContext = createContext();
 export const TodosProvider = ({children}) => {
 
     const [todos, setTodos] = useState([]);
+
     const refreshTodos = async () => {
         try {
             const res = await fetch('/api/getTodos')
@@ -20,7 +21,7 @@ export const TodosProvider = ({children}) => {
             const res = await fetch('/api/createTodo', {
                 method: 'POST',
                 body: JSON.stringify({description}),
-                header: {'Content-Type': 'appliction/json'}
+                headers: {'Content-Type': 'application/json'},
             })
             const newTodo = await res.json();
             setTodos((prevTodos) => {
@@ -35,13 +36,13 @@ export const TodosProvider = ({children}) => {
         try {
             const res = await fetch('/api/updateTodo', {
                 method: 'PUT',
-                body: JSON.stringify({updatedTodo}),
-                header: {'Content-Type': 'appliction/json'}
+                body: JSON.stringify(updatedTodo),
+                headers: {'Content-Type': 'application/json'},
             });
             await res.json();
             setTodos((prevTodos) => {
                 const existingTodos = [...prevTodos];
-                const existingTodo = existingTodos.find(todo => todo.if === updatedTodo.id);
+                const existingTodo = existingTodos.find((todo) => todo.id === updatedTodo.id);
                 existingTodo.fields = updatedTodo.fields;
                 return existingTodos;
             });
@@ -55,7 +56,7 @@ export const TodosProvider = ({children}) => {
             await fetch('/api/deleteTodo', {
                 method: 'DELETE',
                 body: JSON.stringify({id}),
-                header: {'Content-Type': 'appliction/json'}
+                headers: {'Content-Type': 'application/json'},
             });
             setTodos((prevTodos) => {
                 return prevTodos.filter((todo) => todo.id !== id);
