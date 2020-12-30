@@ -1,9 +1,18 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import {table, minifyRecords} from "./api/utils/Airtable"
+import Todo from '../components/Todo';
+import {table, minifyRecords} from './api/utils/Airtable';
+import {TodosContext} from '../context/TodosContext';
+import {useEffect, useContext} from 'react'
 
 export default function Home({initialTodos}) {
-  console.log(initialTodos);
+
+  const {todos, setTodos} = useContext(TodosContext);
+
+  useEffect(() => {
+    setTodos(initialTodos)
+  }, []);
+
   return (
     <div>
       <Head>
@@ -13,6 +22,9 @@ export default function Home({initialTodos}) {
       <Navbar/>
       <main>
         <h1>To Do App</h1>
+        <ul>
+          {todos && todos.map(todo => <Todo key={todo.id} todo={todo}/>)}
+        </ul>
       </main>
 
     </div>
