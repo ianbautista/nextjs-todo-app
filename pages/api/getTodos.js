@@ -9,7 +9,7 @@ export default async  (req, res) => {
 
     } catch (error) {
         res.statusCode = 500;
-        res.json({msg: 'Oops! ..something went wrong my friend.'});
+        res.json({msg: `Oops! ..something went wrong my friend. Here's what happened: ${error}`});
     }
 
     };
