@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
+import {table, minifyRecords} from "./api/utils/Airtable"
 
-export default function Home() {
+export default function Home({initialTodos}) {
+  console.log(initialTodos);
   return (
     <div>
       <Head>
@@ -15,4 +17,23 @@ export default function Home() {
 
     </div>
   )
+}
+
+
+export async function getServerSideProps(context) {
+  try{
+    const todos = await table.select({}).firstPage();
+    return {
+      props: {
+        initialTodos: minifyRecords(todos)
+      }
+    }
+  } catch (error) {
+    console.error(error);
+    return {
+      props: {
+        error: "Oops! ..something went wrong my friend.",
+      }
+    }
+  }
 }
