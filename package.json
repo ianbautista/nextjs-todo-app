@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^0.16.0",
     "airtable": "^0.10.1",
     "next": "10.0.4",
     "react": "17.0.1",
