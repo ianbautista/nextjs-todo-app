@@ -5,28 +5,33 @@ import { table, minifyRecords } from "./api/utils/Airtable";
 import { TodosContext } from "../context/TodosContext";
 import { useEffect, useContext } from "react";
 import auth0 from "./api/utils/auth0";
+import TodoForm from "../components/TodoForm";
 
 export default function Home({ initialTodos, user }) {
 	const { todos, setTodos } = useContext(TodosContext);
-
-	console.log(user);
 	useEffect(() => {
 		setTodos(initialTodos);
 	}, []);
 
 	return (
-		<div>
+		<div className="px-10">
 			<Head>
 				<title>My To Do App</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar user={user} />
 			<main>
-				<h1>To Do App</h1>
-				<ul>
-					{todos &&
-						todos.map((todo) => <Todo key={todo.id} todo={todo} />)}
-				</ul>
+				{user && (
+					<>
+						<TodoForm />
+						<ul>
+							{todos &&
+								todos.map((todo) => (
+									<Todo key={todo.id} todo={todo} />
+								))}
+						</ul>
+					</>
+				)}
 			</main>
 		</div>
 	);
@@ -34,7 +39,6 @@ export default function Home({ initialTodos, user }) {
 
 export async function getServerSideProps(context) {
 	const session = await auth0.getSession(context.req);
-	console.log(session?.user || "not logged in");
 	try {
 		const todos = await table.select({}).firstPage();
 		return {
