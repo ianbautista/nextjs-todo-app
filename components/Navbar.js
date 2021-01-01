@@ -8,7 +8,7 @@ export default function Navbar({ user }) {
 				{user && (
 					<a
 						href="/api/logout"
-						className="rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
+						className="rounded bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4"
 					>
 						Logout
 					</a>
@@ -16,7 +16,7 @@ export default function Navbar({ user }) {
 				{!user && (
 					<a
 						href="/api/login"
-						className="rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
+						className="rounded bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4"
 					>
 						Login
 					</a>
