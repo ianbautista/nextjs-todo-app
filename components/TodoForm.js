@@ -13,7 +13,7 @@ export default function TodoForm() {
 	};
 	return (
 		<form onSubmit={handleSubmit}>
-			<div className="flex items-center justify-between flex-auto">
+			<div className="flex items-center justify-between flex-auto iPhonePlus:px-0 iPhoneX:px-2">
 				<label htmlFor="todo" className="w-full">
 					<input
 						type="text"
@@ -27,7 +27,7 @@ export default function TodoForm() {
 				</label>
 				<button
 					type="submit"
-					className="text-gray-500 hover:text-green-700 text-3xl py-auto px-1 appearance-none focus:outline-none cursor-pointer"
+					className="text-gray-500 hover:text-green-700 text-3xl py-auto pl-1 appearance-none focus:outline-none cursor-pointer "
 				>
 					{" "}
 					<FaPlusSquare />{" "}
