@@ -22,7 +22,7 @@ export default function Home({ initialTodos, user }) {
 					href="https://mysimpletodoapp.now.sh/todo.png"
 				/>
 			</Head>
-			<div className="iPhonePlus:max-w-s iPhonePlus:px-5 iPhonePlus:mx-4 iPhoneX:max-w-ss iPhoneX:px-1 bg-yellow-400 max-w-lg sm:max-w-sm w-full flex-col fixed z-10 top-6 px-9 2xl:max-w-lg 2xl:mx-28  rounded-t-2xl mx-24  md:max-w-lg">
+			<div className="iPhonePlus:max-w-s iPhonePlus:px-5 iPhonePlus:mx-0 iPhoneX:max-w-ss iPhoneX:px-1 bg-yellow-400 max-w-lg sm:max-w-sm w-full flex-col fixed z-10 top-6 px-9 2xl:max-w-lg 2xl:mx-28  rounded-t-2xl mx-24  md:max-w-lg">
 				<Navbar user={user} />
 				{user && <TodoForm />}
 			</div>
