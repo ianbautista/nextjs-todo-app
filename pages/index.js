@@ -1,4 +1,4 @@
-import Head from "next/head";
+// import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Todo from "../components/Todo";
 import { table, minifyRecords } from "./api/utils/Airtable";
@@ -15,13 +15,21 @@ export default function Home({ initialTodos, user }) {
 	console.log("user", user);
 	return (
 		<div className="h-full w-full flex-col flex items-center">
-			<Head>
+			{/* <Head>
 				<title>My To Do App</title>
-				<link
-					rel="icon"
-					href="https://mysimpletodoapp.now.sh/todo.png"
+				<link rel="icon" href="../public/favicon.png" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1"
 				/>
-			</Head>
+				<meta name="theme-color" content="#000000" />
+				<meta
+					name="description"
+					content="Todo App made by Christian Bautista"
+				/>
+				<link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
+				<link rel="manifest" href="../public/manifest.json" />
+			</Head> */}
 			<div className="iPhonePlus:max-w-s iPhonePlus:px-5 iPhonePlus:mx-0 iPhoneX:max-w-ss iPhoneX:px-1 bg-yellow-400 max-w-lg sm:max-w-sm w-full flex-col fixed z-10 top-6 px-9 2xl:max-w-lg 2xl:mx-28  rounded-t-2xl mx-24  md:max-w-lg">
 				<Navbar user={user} />
 				{user && <TodoForm />}

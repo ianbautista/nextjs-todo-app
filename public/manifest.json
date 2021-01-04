@@ -1,0 +1,20 @@
+{
+	"short_name": "Todo App",
+	"name": "Todo App made by Christian Bautista",
+	"icons": [
+		{
+			"src": "favicon.png",
+			"sizes": "240x240",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "favicon.png",
+			"type": "image/png",
+			"sizes": "240x240"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}
