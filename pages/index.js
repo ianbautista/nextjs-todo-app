@@ -12,25 +12,28 @@ export default function Home({ initialTodos, user }) {
 	useEffect(() => {
 		setTodos(initialTodos);
 	}, []);
-
+	console.log("user", user);
 	return (
-		<div className="px-10">
+		<div className="h-full w-full flex-col flex items-center">
 			<Head>
 				<title>My To Do App</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link
+					rel="icon"
+					href="https://mysimpletodoapp.now.sh/todo.png"
+				/>
 			</Head>
-			<Navbar user={user} />
+			<div className="iPhonePlus:max-w-s iPhonePlus:px-5 iPhonePlus:mx-4 iPhoneX:max-w-ss iPhoneX:px-1 bg-yellow-400 max-w-lg sm:max-w-sm w-full flex-col fixed z-10 top-6 px-9 2xl:max-w-lg 2xl:mx-28  rounded-t-2xl mx-24  md:max-w-lg">
+				<Navbar user={user} />
+				{user && <TodoForm />}
+			</div>
 			<main>
 				{user && (
-					<>
-						<TodoForm />
-						<ul>
-							{todos &&
-								todos.map((todo) => (
-									<Todo key={todo.id} todo={todo} />
-								))}
-						</ul>
-					</>
+					<ul className="mt-32 px-6 bg-yellow-400 w-full Andriod1:max-w-ss 2xl:max-w-lg 2xl:px-5 iPhoneX:w-screen iPhoneX:px-3 iPhonePlus:w-screen iPhonePlus:mx-0 iPhonePlus:px-0 md:max-w-lg md:px-5">
+						{todos &&
+							todos.map((todo) => (
+								<Todo key={todo.id} todo={todo} />
+							))}
+					</ul>
 				)}
 			</main>
 		</div>
