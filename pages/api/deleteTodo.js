@@ -1,7 +1,7 @@
 import { table, getMinifiedRecord } from "./utils/Airtable";
-import ownsRecord from "./middleware/OwnsRecord";
+import OwnsRecord from "./middleware/OwnsRecord";
 
-export default ownsRecord(async (req, res) => {
+export default OwnsRecord(async (req, res) => {
 	const { id } = req.body;
 
 	try {

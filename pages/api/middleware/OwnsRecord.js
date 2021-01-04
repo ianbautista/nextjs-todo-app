@@ -1,7 +1,7 @@
 import auth0 from "../utils/auth0";
 import { table } from "../utils/Airtable";
 
-const ownsRecord = (handler) =>
+const OwnsRecord = (handler) =>
 	auth0.requireAuthentication(async (req, res) => {
 		const { user } = await auth0.getSession(req);
 
@@ -23,4 +23,4 @@ const ownsRecord = (handler) =>
 		}
 	});
 
-export default ownsRecord;
+export default OwnsRecord;
