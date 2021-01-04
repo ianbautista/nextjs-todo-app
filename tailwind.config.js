@@ -1,11 +1,95 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-}
+	purge: [],
+	darkMode: false, // or 'media' or 'class'
+	theme: {
+		maxWidth: {
+			0: "0rem",
+			none: "none",
+			sss: "19.56rem",
+			xs: "20rem",
+			ss: "20.4rem",
+			s: "22.8rem",
+			sm: "24rem",
+			md: "28rem",
+			lg: "32rem",
+			xl: "36rem",
+			"2xl": "42rem",
+			"3xl": "48rem",
+			"4xl": "56rem",
+			"5xl": "64rem",
+			"6xl": "72rem",
+			"7xl": "80rem",
+			"8xl": "88rem",
+			"9xl": "96rem",
+			full: "100%",
+			min: "min-content",
+			max: "max-content",
+			prose: "65ch",
+			"screen-xxs": "360px",
+			"screen-xs": "375px",
+			iPhonePlus: "414px",
+			"screen-sm": "640px",
+			"screen-md": "768px",
+			"screen-lg": "1024px",
+			"screen-xl": "1280px",
+			"screen-2xl": "1536px",
+		},
+		minWidth: {
+			0: "0rem",
+			none: "none",
+			sss: "19.56rem",
+			xs: "20rem",
+			ss: "20.4rem",
+			s: "22.8rem",
+			sm: "24rem",
+			md: "28rem",
+			lg: "32rem",
+			"2lg": "34rem",
+			xl: "36rem",
+			"2xl": "42rem",
+			"3xl": "48rem",
+			"4xl": "56rem",
+			"5xl": "64rem",
+			"6xl": "72rem",
+			"7xl": "80rem",
+			"8xl": "88rem",
+			"9xl": "96rem",
+			full: "100%",
+			min: "min-content",
+			max: "max-content",
+			prose: "65ch",
+			"screen-Andriod1": "360px",
+			"screen-iPhoneX": "375px",
+			iPhonePlus: "414px",
+			"screen-sm": "640px",
+			"screen-md": "768px",
+			"screen-lg": "1024px",
+			"screen-xl": "1280px",
+			"screen-2xl": "1536px",
+		},
+		extend: {},
+		screens: {
+			Andriod1: "360px",
+			iPhoneX: "375px",
+			iPhonePlus: "414px",
+			sm: "640px",
+			// => @media (min-width: 640px) { ... }
+
+			md: "768px",
+			// => @media (min-width: 768px) { ... }
+
+			lg: "1024px",
+			// => @media (min-width: 1024px) { ... }
+
+			xl: "1280px",
+			// => @media (min-width: 1280px) { ... }
+
+			"2xl": "1536px",
+			// => @media (min-width: 1536px) { ... }
+		},
+	},
+	variants: {
+		extend: {},
+	},
+	plugins: [],
+};
