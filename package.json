@@ -11,6 +11,7 @@
     "@auth0/nextjs-auth0": "^0.16.0",
     "airtable": "^0.10.1",
     "next": "10.0.4",
+    "next-pwa": "^5.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0"
