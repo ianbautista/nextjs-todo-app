@@ -16,7 +16,8 @@
     "react-icons": "^4.1.0"
   },
   "devDependencies": {
-    "postcss-preset-env": "^6.7.0",
+    "autoprefixer": "10.0.2",
+    "postcss": "8.1.7",
     "tailwindcss": "^2.0.2"
   }
 }
