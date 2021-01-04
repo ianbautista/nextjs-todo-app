@@ -27,6 +27,12 @@ export default function Home({ initialTodos, user }) {
 				{user && <TodoForm />}
 			</div>
 			<main>
+				{!user && (
+					<p className="text-gray-50 mt-80 px-6">
+						{" "}
+						Please login to use this App.
+					</p>
+				)}
 				{user && (
 					<ul className="mt-32 px-6 bg-yellow-400 w-full Andriod1:max-w-ss 2xl:max-w-lg 2xl:px-5 iPhoneX:w-screen iPhoneX:px-3 iPhonePlus:w-screen iPhonePlus:mx-0 iPhonePlus:px-0 md:max-w-lg md:px-5">
 						{todos &&
@@ -42,8 +48,11 @@ export default function Home({ initialTodos, user }) {
 
 export async function getServerSideProps(context) {
 	const session = await auth0.getSession(context.req);
+	let todos = [];
 	try {
-		const todos = await table.select({}).firstPage();
+		todos = await table
+			.select({ filterByFormula: `userid = '${session.user.name}'` })
+			.firstPage();
 		return {
 			props: {
 				initialTodos: minifyRecords(todos),
