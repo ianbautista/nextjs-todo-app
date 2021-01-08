@@ -19,7 +19,7 @@ export default function Home({ initialTodos, user }) {
 				<title>My To Do App</title>
 				<meta
 					name="viewport"
-					content="width=device-width, initial-scale=1"
+					content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
 				/>
 			</Head>
 			<div className="iPhonePlus:max-w-s iPhonePlus:px-5 iPhonePlus:mx-0 iPhoneX:max-w-ss iPhoneX:px-1 bg-yellow-400 max-w-lg sm:max-w-sm w-full flex-col fixed z-10 top-6 px-9 2xl:max-w-lg 2xl:mx-28  rounded-t-2xl mx-24  md:max-w-lg">
