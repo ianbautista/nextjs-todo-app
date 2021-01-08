@@ -13,7 +13,7 @@ export default function Todo({ todo }) {
 		updateTodo(updatedTodo);
 	};
 	return (
-		<li className="flex justify-between bg-gray-50 grid-cols-3 grid-rows-1 items-center shadow-lg rounded-lg my-2 py-2 px-4 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+		<li className="flex justify-between bg-gray-50 grid-cols-3 grid-rows-1 items-center shadow-lg rounded-lg my-2 py-2 px-4 sm:transition duration-200 ease-in-out sm:transform hover:-translate-y-1 hover:scale-110 iPhonePlus:transition-none iPhonePlus:transform-none iPhoneX:transition-none iPhoneX:transform-none Andriod1:transition-none Andriod1:transform-none ">
 			<div>
 				<input
 					type="checkbox"
