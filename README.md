@@ -13,12 +13,14 @@ This App is PWA utilizing [next-pwa](https://www.npmjs.com/package/next-pwa) to 
 This means you can use it on your browser or install this app to work _like_ a native app on your device.
 
 To install on your desktop. Just click on the install button on your browser, best used with Chrome.
-![desktop install](https://imgur.com/BgMwoNg)
+
+![desktop install](https://i.imgur.com/BgMwoNg.png)
 
 To install on your phone just add to home screen.
-![mobile install](https://imgur.com/hucMHtd)
 
-![mobile sample](https://imgur.com/a/ToYVDoY)
+![mobile install](https://i.imgur.com/hucMHtd.jpg)
+
+![mobile sample](https://i.imgur.com/bF0597u.mp4)
 
 ---
 
