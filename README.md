@@ -6,7 +6,7 @@
 
 > A good way to get your fix at getting things done.
 
-This is a simple todo app that you can use, from regular a _to do list_, a _shopping list_, to a _task list_.
+This is a simple to-do app that you can use, as a regular _to-do list_, a _shopping list_, or a _task list_.
 
 This App is PWA utilizing [next-pwa](https://www.npmjs.com/package/next-pwa) to register and generate service worker.
 
