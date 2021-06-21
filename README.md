@@ -20,7 +20,8 @@ To install on your phone just add to home screen.
 
 ![mobile install](https://i.imgur.com/hucMHtd.jpg)
 
-![mobile sample](https://i.imgur.com/bF0597u.mp4)
+![mobile demo](https://user-images.githubusercontent.com/64442827/122819854-d1fb5d80-d28f-11eb-987a-e6512a0ff2ca.gif)
+
 
 ---
 
