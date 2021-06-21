@@ -1,34 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SIMPLE TODO APP
 
-## Getting Started
+[Production](https://mysimpletodoapp.vercel.app)
 
-First, run the development server:
+### We all love checking items off a list.
+
+> A good way to get your fix at getting things done.
+
+This is a simple todo app that you can use, from regular a _to do list_, a _shopping list_, to a _task list_.
+
+This App is PWA utilizing [next-pwa](https://www.npmjs.com/package/next-pwa) to register and generate service worker.
+
+This means you can use it on your browser or install this app to work _like_ a native app on your device.
+
+To install on your desktop. Just click on the install button on your browser, best used with Chrome.
+![desktop install](https://imgur.com/BgMwoNg)
+
+To install on your phone just add to home screen.
+![mobile install](https://imgur.com/hucMHtd)
+
+![mobile sample](https://imgur.com/a/ToYVDoY)
+
+---
+
+This app is built using Next.js [Next.js](https://nextjs.org/)
+
+## Local Development
+
+First, run the development server. On the terminal:
+
+```bash
+npm install
+```
+
+then
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) on your browser.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Environment Variables
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Create `.env` file with the following variables
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+AIRTABLE_API_KEY=
+AIRTABLE_BASE_ID=
+AIRTABLE_TABLE_NAME=
+AUTH0_DOMAIN=
+AUTH0_SECRET=
+AUTH0_CLIENT_ID=
+AUTH0_REDIRECT_URI=
+COOKIE_SECRET=
+```
 
-## Learn More
+## Authentication
 
-To learn more about Next.js, take a look at the following resources:
+Authentication is with [Auth0](https://auth0.com/docs/quickstart/spa/react). Read Next.js SDK for signing in with Auth0 [here](https://github.com/auth0/nextjs-auth0).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Airtable API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This App is using the [Airtable API](https://airtable.com/api) as its database. Read Airtable Javascript client [here](https://github.com/airtable/airtable.js). The middleware `OwnsRecord.js` matches the current user's `userid` property in the database.
 
-## Deploy on Vercel
+      Airtable Schema:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+      | description | completed | userid |
+      | ----------- | --------- | ------ |
+      | string      | boolean   | string |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Styling
+
+This App is using [tailwind](https://tailwindcss.com/) for styling and [react-icons](https://react-icons.github.io/react-icons/) for the icons set.
+
+## Deployed on Vercel
+
+This app is currently deployed using the [Vercel Platform](https://vercel.com) this is because Next.js is developed by Vercel thus making deployment a breeze.
