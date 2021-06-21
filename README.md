@@ -22,10 +22,9 @@ To install on your phone just add to home screen.
 
 ![mobile demo](https://user-images.githubusercontent.com/64442827/122819854-d1fb5d80-d28f-11eb-987a-e6512a0ff2ca.gif)
 
-
 ---
 
-This app is built using Next.js [Next.js](https://nextjs.org/)
+This app is built using [Next.js](https://nextjs.org/)
 
 ## Local Development
 
